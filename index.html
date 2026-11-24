@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Enquiry | JOEL.</title>
+<style>
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #171717; background: #fafafa; }
+body { margin: 0; }
+header { border-bottom: 1px solid #e5e5e5; background: white; }
+header p, main { max-width: 1040px; margin: auto; padding-inline: clamp(16px, 5vw, 48px); }
+header p { padding-block: 18px; font-weight: 850; font-size: 1.35rem; }
+main { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: clamp(24px, 5vw, 64px); padding-block: clamp(26px, 7vw, 80px); }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.06; letter-spacing: -.055em; margin: 0 0 16px; }
+p { line-height: 1.6; }
+a { color: #414183; overflow-wrap: anywhere; }
+form { padding: clamp(16px, 4vw, 32px); border: 1px solid #e5e5e5; border-radius: 16px; background: white; }
+h2 { margin: 0 0 20px; font-size: 1.3rem; }
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+label { display: block; font-weight: 650; }
+label span { font-weight: 400; color: #555; }
+input, select, textarea { width: 100%; min-height: 44px; margin-top: 6px; border: 1px solid #888; border-radius: 7px; padding: 10px; font: inherit; color: inherit; background: white; }
+textarea { resize: vertical; }
+.full { grid-column: 1 / -1; }
+small { display: block; margin-block: 16px; color: #555; line-height: 1.5; }
+button { min-height: 44px; padding: 10px 16px; border: 0; border-radius: 7px; background: #202020; color: white; font: inherit; font-weight: 650; cursor: pointer; }
+button:hover { background: #414183; }
+:focus-visible { outline: 3px solid #5252a4; outline-offset: 3px; }
+@media (max-width: 720px) { main { grid-template-columns: 1fr; } }
+@media (max-width: 440px) { .fields { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header><p>JOEL.</p></header>
+<main>
+<section aria-labelledby="contact-title">
+<h1 id="contact-title">Let’s work on your next project.</h1>
+<p>Tell me what you have in mind, what you need help with, and when you’d like to get started.</p>
+<p>Prefer email? <a href="mailto:joeljabhishek@gmail.com">joeljabhishek@gmail.com</a></p>
+</section>
+<form method="post" action="https://formsubmit.co/joeljabhishek@gmail.com" aria-labelledby="enquiry-title" aria-describedby="enquiry-privacy" accept-charset="UTF-8">
+<h2 id="enquiry-title">Project enquiry</h2>
+<input type="hidden" name="_subject" value="New project enquiry for JOEL.">
+<input type="hidden" name="_template" value="table">
+<div hidden><label>Leave this field blank<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+<div class="fields">
+<label>Name<input name="name" autocomplete="name" required maxlength="100"></label>
+<label>Business name <span>(optional)</span><input name="business" autocomplete="organization" maxlength="120"></label>
+<label class="full">Email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+<label class="full">Service required
+<select name="service" required>
+<option value="">Choose a service</option>
+<option value="instagram">Instagram Optimisation</option>
+<option value="linkedin">LinkedIn Optimisation</option>
+<option value="x">X Optimisation</option>
+<option value="marketing-design">Marketing Materials &amp; Design</option>
+<option value="website">Website Development</option>
+<option value="brand-identity">Complete Brand Identity</option>
+<option value="custom">Custom project or unsure</option>
+</select></label>
+<label>Approximate budget <span>(optional)</span><input name="budget" placeholder="e.g. ₹5,000" maxlength="100"></label>
+<label>Desired timeline <span>(optional)</span><input name="timeline" maxlength="120"></label>
+<label class="full">Project description<textarea name="message" rows="5" required maxlength="4000"></textarea></label>
+</div>
+<small id="enquiry-privacy">FormSubmit processes the details you send and forwards them to Joel so he can respond to your enquiry.</small>
+<button type="submit">Send project enquiry</button>
+</form>
+</main>
+<script>
+const serviceSelect = document.querySelector('select[name="service"]');
+const requestedService = new URLSearchParams(window.location.search).get('service');
+if ([...serviceSelect.options].some(option => option.value === requestedService)) {
+  serviceSelect.value = requestedService;
+}
+</script>
+</body>
+</html>
