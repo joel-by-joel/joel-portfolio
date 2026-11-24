@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | JOEL.</title><link rel="stylesheet" href="joel.css"><header><div class="bar"><a class="logo" href="index.html">JOEL.</a><button type="button" id="menu" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services &amp; Pricing</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav></div></header><main><div class="contact">
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | JOEL.</title><link rel="stylesheet" href="joel.css"><link rel="stylesheet" href="pricing.css"><header><div class="bar"><a class="logo" href="index.html">JOEL.</a><button type="button" id="menu" aria-expanded="false" aria-controls="nav">Menu</button><nav id="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services &amp; Pricing</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav></div></header><main><div class="contact">
 <section aria-labelledby="contact-title">
 <h1 id="contact-title">Let’s work on your next project.</h1>
 <p>Tell me what you have in mind, what you need help with, and when you’d like to get started.</p>
@@ -14,20 +14,11 @@
 <label>Business name <span>(optional)</span><input name="business" autocomplete="organization" maxlength="120"></label>
 <label class="full">Email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
 <label class="full">Service required
-<select name="service" required>
-<option value="">Choose a service</option>
-<option value="instagram">Instagram Optimisation</option>
-<option value="linkedin">LinkedIn Optimisation</option>
-<option value="x">X Optimisation</option>
-<option value="marketing-design">Marketing Materials &amp; Design</option>
-<option value="website">Website Development</option>
-<option value="brand-identity">Complete Brand Identity</option>
-<option value="custom">Custom project or unsure</option>
-</select></label>
+<select name="service" required><option value="">Choose a service</option><option value="instagram">Instagram Optimisation</option><option value="linkedin">LinkedIn Optimisation</option><option value="x">X Optimisation</option><option value="marketing-design">Marketing Materials & Design</option><option value="website">Website Development</option><option value="brand-identity">Complete Brand Identity</option><option value="custom">Custom project or unsure</option></select></label><div id="quote-fields" class="full calculator" hidden><label hidden><span data-quantity-label></span><input name="quantity" type="number" inputmode="numeric" step="1" disabled></label><dl class="estimate" aria-live="polite"></dl><p class="estimate-note">This is an estimate. Joel will confirm your final quote after reviewing the requirements.</p></div><input name="estimate_summary" type="hidden">
 <label>Desired timeline <span>(optional)</span><input name="timeline" maxlength="120"></label>
-<label class="full">Project description<textarea name="message" rows="5" required maxlength="4000"></textarea></label>
+<label class="full">Project requirements<textarea name="message" rows="5" required maxlength="4000"></textarea></label><label class="full">Additional comments <span>(optional)</span><textarea name="comments" rows="3" maxlength="2000"></textarea></label>
 </div>
 <small id="enquiry-privacy">FormSubmit processes the details you send and forwards them to Joel so he can respond to your enquiry.</small>
 <button type="submit">Send project enquiry</button>
 </form>
-</div></main><footer><strong>JOEL.</strong><a href="terms.html">Terms &amp; Conditions</a><a href="mailto:joeljabhishek@gmail.com">joeljabhishek@gmail.com</a></footer><script src="joel.js" defer></script></html>
+</div></main><footer><strong>JOEL.</strong><a href="terms.html">Terms &amp; Conditions</a><a href="mailto:joeljabhishek@gmail.com">joeljabhishek@gmail.com</a></footer><script src="joel.js" defer></script><script src="pricing.js" defer></script><script src="pricing-ui.js" defer></script></html>
